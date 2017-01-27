@@ -9,4 +9,6 @@
      window.confirm('new factoid saved');
    });
 
+   
+
  });

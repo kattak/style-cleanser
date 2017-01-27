@@ -6,6 +6,11 @@
     "activeTab",
     "tabs"
   ],
+
+  "content_scripts": [ {
+     "css": [ "style.css" ],
+  } ],
+
   "background": {
     "scripts": ["jquery-3.1.1.min.js", "content.js"],
     "persistent": false

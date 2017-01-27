@@ -139,3 +139,8 @@ p img {
   float: left;
   margin: 0 1em 1em 0;
 }
+
+body{
+  min-width: 400px;
+  min-height: 200px
+}

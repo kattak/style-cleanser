@@ -6,6 +6,7 @@
      console.log(selection[0])
      console.log(Object.getOwnPropertyNames(selection[0]));
      $.post( "http://localhost:3000/factoids", {factoid:{text: selection[0][0], url:selection[0][1]}} );
+     window.confirm('new factoid saved');
    });
 
  });

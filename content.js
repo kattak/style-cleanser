@@ -27,15 +27,15 @@
      // console.log(selNode);
 
      //try making post request to localhost rails app
-     $.post( "http://localhost:3000/factoids", { text: selection[0] } );
+     $.post( "http://localhost:3000/factoids", {factoid:{text: selection[0]}} );
     //
     //  $.post( "ajax/test.html", function( data ) {
     //    $( ".result" ).html( data );
     //  });
 
-     chrome.tabs.create({
-       url: "http://localhost:3000/factoids?text=".concat(selection[0])
-     })
+    //  chrome.tabs.create({
+    //    url: "http://localhost:3000/factoids?text=".concat(selection[0])
+    //  })
    });
    // No tabs or host permissions needed!
    // chrome.tabs.executeScript({

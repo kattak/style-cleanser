@@ -8,12 +8,4 @@
      $.post( "http://localhost:3000/factoids", {factoid:{text: selection[0][0], url:selection[0][1]}} );
    });
 
-   chrome.tabs.executeScript({
-     code: 'console.log("hi");'
-   }, function(selection){
-    //  console.log(selection[0])
-    //  console.log(Object.getOwnPropertyNames(selection[0]));
-    //  $.post( "http://localhost:3000/factoids", {factoid:{text: selection[0]}} );
-   });
-
  });

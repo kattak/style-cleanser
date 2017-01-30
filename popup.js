@@ -17,14 +17,17 @@
 //   })
 //
 // });
-function bindAjaxSubmit(){
+$('document').ready(function(){
   console.log("lad")
-  $('#new-factoid').submit(function(event){
+  $('.test').on('click', function(){
+    console.log('THIS IS A TEST')
+  })
+  $('#form-holder').on('submit', '#new-factoid', function(e){
     console.log('before')
-    event.preventDefault();
+    e.preventDefault();
     console.log('hello')
   })
-}
+})
 function hi(){
   console.log('hi')
 }
@@ -38,19 +41,21 @@ function getTabSelection() {
     console.log(Object.getOwnPropertyNames(selection[0]));
 
     $('#selection').append(selection[0][0])
+    $('#selection_form').val(selection[0][0])
     $('#url').append(selection[0][1])
+    $('#url_form').val(selection[0][1])
     //make post request to localhost
     // $.post( "http://localhost:3000/factoids", {factoid:{text: selection[0][0], url:selection[0][1]}} );
     // window.confirm('new factoid saved');
-    $.ajax({
-      url: "http://localhost:3000/factoids/new",
-      method: 'get'
-    }).done(function(response){
-      $('#form-holder').append(response);
-      hi();
-      bindAjaxSubmit();
-      console.log("done")
-    })
+    // $.ajax({
+    //   url: "http://localhost:3000/factoids/new",
+    //   method: 'get'
+    // }).done(function(response){
+    //   $('#form-holder').append(response);
+    //   hi();
+    //   // bindAjaxSubmit();
+    //   console.log("done")
+    // })
 
   });
 }

@@ -18,16 +18,34 @@
 //
 // });
 function bindAjaxSubmit(){
-  console.log("lad")
+  console.log("in bindAjaxSubmit")
   $('#new-factoid').submit(function(event){
-    console.log('before')
+    console.log('before preventDefault in bindAjaxSubmit')
     event.preventDefault();
-    console.log('hello')
+    console.log('after event prevent default in bindAjaxSubmit')
   })
-}
-function hi(){
-  console.log('hi')
-}
+};
+
+$("#searchForm").submit(function(event) {
+   /* stop form from submitting normally */
+   event.preventDefault();
+
+   /* get some values from elements on the page: */
+   var $form = $(this),
+       term = $form.find('input[name="s"]').val(),
+       url = $form.attr('action');
+
+   /* Send the data using post */
+   var posting = $.post(url, {
+       s: term
+   });
+
+   /* Put the results in a div */
+   posting.done(function(data) {
+       var content = $(data).find('#content');
+       $("#result").empty().append(content);
+   });
+});
 
 function getTabSelection() {
   chrome.tabs.executeScript({
@@ -47,7 +65,6 @@ function getTabSelection() {
       method: 'get'
     }).done(function(response){
       $('#form-holder').append(response);
-      hi();
       bindAjaxSubmit();
       console.log("done")
     })

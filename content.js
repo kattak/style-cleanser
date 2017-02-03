@@ -9,7 +9,7 @@
  //
  //     //make post request to localhost
  //     $.post( "http://localhost:3000/factoids", {factoid:{text: selection[0][0], url:selection[0][1]}} );
- //     window.confirm('new factoid saved');
+ //to     window.confirm('new factoid saved');
  //   });
  //
  //

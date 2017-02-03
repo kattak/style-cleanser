@@ -1,11 +1,12 @@
 {
+
   "name": "Factoid",
   "description": "Save a factoid",
   "version": "2.0",
   "permissions": [
     "activeTab",
     "tabs",
-    "localhost:3000*"
+    "http://localhost:3000/"
   ],
 
   "background": {

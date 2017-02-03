@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        min-width: 400px;
+        min-height: 200px
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="selection"></div>
+    <div id="url" hidden></div>
+    <div id="form-holder">
+      <form action="http://localhost:3000/factoids" method="post" class="factoid_form">
+        <input type="text" name="factoid[url]" id="url_form">
+        <input type="text" name="factoid[text]" id="selection_form">
+        <input type="submit" value="submit">
+      </form>
+
+
+    </div>
+    <img id="image-result" hidden>
+    <button class="test">words</button>
+  </body>
+</html>

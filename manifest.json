@@ -1,18 +1,21 @@
 {
-  "name": "Page Redder",
-  "description": "Make the current page red",
+  "name": "Factoid",
+  "description": "Save a factoid",
   "version": "2.0",
   "permissions": [
     "activeTab",
-    "tabs"
+    "tabs",
+    "http://localhost:3000/*"
   ],
+
   "background": {
     "scripts": ["jquery-3.1.1.min.js", "content.js"],
     "persistent": false
   },
   "browser_action": {
-    "default_title": "Make this page red",
-    "default_icon": "icon.png"
+    "default_title": "Save a factoid",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   },
   "manifest_version": 2
 }

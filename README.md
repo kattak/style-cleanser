@@ -14,6 +14,23 @@ Rails Emoji Picker
 
 This might be better if emojis will be in the database:
   https://github.com/mroth/emoji_data.rb
+  
+  
+02.03.2017
+  Let's just use emojipicker for now, can customize later.
+  Will need to represent each and every emoji as AR model objects.
+  >>Can use find_or_create_by
+  
+  Shortname for an emoji:
+  :smile:
+  >>Set shortname as name for emoji 
+  
+  "happy" "sad" "science"
+  first first POC:
+  >>-draw schema-
+  >>use some strings as tags
+  
+name: KattoidFactoid
 
 ### Chrome Identity API for Chrome Extensions
   Example app:
@@ -21,4 +38,4 @@ This might be better if emojis will be in the database:
 
 ### How to represent emojis in database?
   Do PoC with storing emojis in PSQL database first
-  Results:
+  - Results: find_by(name: "😋") would this work?

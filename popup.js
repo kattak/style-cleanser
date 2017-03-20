@@ -18,11 +18,11 @@
 //
 // });
 $('document').ready(function(){
-  console.log("lad")
-  $('.test').on('click', function(){
-    console.log('THIS IS A TEST')
-  })
-  $('#form-holder').on('submit', '#new-factoid', function(e){
+  console.log("docready")
+  // $('#submit-factoid').on('click', function(){
+  //   console.log('THIS IS A TEST')
+  // })
+  $('#form-holder').on('submit', '.factoid_form', function(e){
     console.log('before')
     e.preventDefault();
     console.log('hello')
@@ -64,4 +64,5 @@ function getTabSelection() {
 
 document.addEventListener('DOMContentLoaded', function() {
   getTabSelection();
+  console.log("lad")
 });

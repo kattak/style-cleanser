@@ -25,7 +25,21 @@ $('document').ready(function(){
   $('#form-holder').on('submit', '.factoid_form', function(e){
     console.log('before')
     e.preventDefault();
-    console.log('hello')
+    console.log(this.children)
+    var data = $(this).serialize()
+    var route = $(this).attr('action')
+    var form = this
+    var submit = $.ajax({
+      url: route,
+      method: "POST",
+      data: data
+    })
+    submit.done(function(res){
+      $("#form-holder").html("<br><strong>successfuly submitted<strong>")
+    })
+
+    console.log(route)
+    console.log(route)
   })
 })
 function hi(){

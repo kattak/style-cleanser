@@ -35,7 +35,11 @@ $('document').ready(function(){
       data: data
     })
     submit.done(function(res){
-      $("#form-holder").html("<br><strong>successfuly submitted<strong>")
+      console.log(res)
+      $("#form-holder").html(res)
+    }).fail(function(res){
+      $('#form-holder').html(res)
+
     })
 
     console.log(route)

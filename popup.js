@@ -35,17 +35,33 @@ $('document').ready(function(){
       data: data
     })
     submit.done(function(res){
-      console.log(res)
+      // console.log(res)
       $("#form-holder").html(res)
+      // bindSignIn()
     }).fail(function(res){
       $('#form-holder').html(res)
 
     })
 
-    console.log(route)
-    console.log(route)
+    // console.log(route)
+    // console.log(route)
+  })
+
+  $('#form-holder').on('click', '#in-site', function(e){
+    console.log(this)
+    var url = $(this).attr("href")
+    console.log(url)
+    chrome.tabs.create({url: url})
   })
 })
+
+function bindSiteLink(){
+  $(".login-button").on('click', function(){
+    console.log("log-in")
+    // We need to figure out a way to get the sign in to function the way we want
+  })
+}
+
 function hi(){
   console.log('hi')
 }

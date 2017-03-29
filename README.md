@@ -1,6 +1,12 @@
 # style-cleanser
 Chrome extension to save factoids.
 
+## To Do
+1. add Oauth
+2. add styling
+3. add voting
+4. add commenting?
+
 ## Some big questions:
 
 ### Emojis

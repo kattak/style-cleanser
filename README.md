@@ -6,6 +6,7 @@ Chrome extension to save factoids.
 2. add styling
 3. add voting
 4. add commenting?
+5. add show pages for users
 
 ## Some big questions:
 
